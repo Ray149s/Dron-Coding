@@ -75,6 +75,7 @@ def getKeyboardInput():
 
     sleep(interval)
     a += yaw
+    ## The following two lines requierd the import of math in order to work
     x += int(d*math.cos(math.radians(a)))
     y += int(d*math.sin(math.radians(a)))
 
@@ -82,9 +83,11 @@ def getKeyboardInput():
     return [lr, fb, ud, yv, x, y]
    
 def drawPoints(img, points):
-    for point in points:
-        cv2.circle(img, point, 5,(0, 0, 255), cv2.FILLED)  ## 20 is the size of the circle dot being filled, cv2.circle definse the shape
-                                                         ## image field the shapes starting location is determined by  x and y cv2.FILLED in with red(0,0,255)
+    for point in points:                                   ## Recognize that we have point and points they are not the same and not differentiating them will cause the code not to work
+                                                           ## I mistakenly used points everywhere in the following code and it caused the if statement on line 105
+                                                           ## and the drawPoints function on line 108 to not work
+        cv2.circle(img, point, 5,(0, 0, 255), cv2.FILLED)  ## 20 is the size of the circle dot being filled, cv2.circle defines the shape
+                                                           ## image field the shapes starting location is determined by  x and y cv2.FILLED in with red(0,0,255)
     
     cv2.circle(img, points[-1], 8, (0, 255, 0), cv2.FILLED)
    
