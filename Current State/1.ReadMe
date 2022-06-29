@@ -1,0 +1,7 @@
+Hello so in the main folder ‘Current State’ are the programs I have used so far in my project.
+> 3X3FrameVideoRecording: Was created because of the advice of my instructor that I mentioned in my message.
+> DroneDataSet: I created and used to fly the done around and record video feed and drone state to make so that I could make a data set from them.
+> FrameExtration: I made to extract each frame from the videos that I recorded so that I could create the data set that has a frame and the correlated drone state.
+> Keyboard Control: I just an example of how I learned to control the drone from the keyboard
+> KeyPressModule: is the class that all my other classes used in order to enable controlling the drone from keyboard
+> Navigation: Allows me to tell drone to go to xyz position in relation to its current location.  
